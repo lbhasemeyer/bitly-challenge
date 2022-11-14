@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import AnimalDetails from './components/AnimalDetails';
-import Home from './components/Home';
+import AnimalDetails from './pages/AnimalDetails';
+import Home from './pages/Home';
 import Nav from './components/Nav';
 import { Navigate, Routes, Route } from 'react-router-dom';
 
@@ -27,8 +27,9 @@ function App(){
     <React.Fragment>
       <Nav />
       <Routes>
+        {/* If we had a large dataset I would only want to pass props needed - not allAnimals */}
         <Route path='/animals' element={<Home animals={allAnimals} animalsError={getAnimalsError} />} />
-        {/* <Route path='/animals/:id' element={<AnimalDetails />} /> */}
+        <Route path='/animals/:id' element={<AnimalDetails animals={allAnimals} />} />
         {/* Redirects */}
         <Route path="/" element={ <Navigate to="/animals" /> } />
       </Routes>

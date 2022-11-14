@@ -1,0 +1,18 @@
+.AnimalDetails {
+    text-align: center;
+    height: calc(100vh - 50px);
+}
+
+.AnimalDetails.night {
+    background-color: darkslategray;
+    color: rgb(206, 198, 198);
+}
+
+.AnimalDetails.day {
+    background-color: lightgoldenrodyellow;
+    color: rgb(153, 97, 8);
+}
+
+h1 {
+    margin-top: 0px;;
+}

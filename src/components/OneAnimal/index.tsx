@@ -8,6 +8,7 @@ interface oneAnimalProps {
 
 const OneAnimal = ({ name, id }: oneAnimalProps) => {
     const animalUrl = `/animals/${id}`;
+    
     return (
         <li>
             <Link to={animalUrl} state={{ name, id }}>

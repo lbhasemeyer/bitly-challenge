@@ -1,4 +1,4 @@
-import OneAnimal from '../OneAnimal';
+import OneAnimal from '../../components/OneAnimal';
 import React, {useState, useEffect} from 'react';
 
 interface animalProps {
@@ -7,8 +7,6 @@ interface animalProps {
 }
 
 function Home(props:any) {
-console.log('props: ', props) 
-
   const animalData = 
     props.animals.map((animal: animalProps) => {
       return <OneAnimal key={animal?.id} name={animal?.name} id={animal?.id} />

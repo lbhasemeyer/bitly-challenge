@@ -1,6 +1,6 @@
 import React from 'react';
-import './index.css';
 import { Link, useLocation } from 'react-router-dom';
+import './index.css';
 
 function Nav() {
     const currentLocation = useLocation().pathname;
@@ -10,7 +10,7 @@ function Nav() {
         <div className="Nav">
             <Link to='/animals'>
                 <div className="Nav-text">
-                    {isHomePage ? 'Viewing All Animals' : 'Go To All Animals'}
+                    {isHomePage ? 'Currently viewing all animals' : 'Go to all animals'}
                 </div>
             </Link>
         </div>
