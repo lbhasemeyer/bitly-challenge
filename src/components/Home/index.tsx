@@ -3,8 +3,6 @@ import React, {useState, useEffect} from 'react';
 
 interface animalProps {
   name: string,
-  active_time: string,
-  habitat: string,
   id: number
 }
 
@@ -13,7 +11,7 @@ console.log('props: ', props)
 
   const animalData = 
     props.animals.map((animal: animalProps) => {
-      return <OneAnimal key={animal?.id} name={animal?.name} active_time={animal?.active_time} habitat={animal?.habitat} id={animal?.id} />
+      return <OneAnimal key={animal?.id} name={animal?.name} id={animal?.id} />
     });
 
   return (
@@ -21,7 +19,9 @@ console.log('props: ', props)
       <>
         <h1>All animals</h1>
         {props.animalsError !== '' ? props.animalsError : null}
-        {animalData}
+        <ul>
+          {animalData}
+        </ul>
       </>
     </div>
   );
