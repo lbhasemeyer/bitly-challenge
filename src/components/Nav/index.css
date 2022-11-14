@@ -1,0 +1,14 @@
+.Nav {
+    border: 1px solid red;
+    color: white;
+    height: 50px;
+    opacity: .8;
+}
+
+.Nav-text {
+    align-items: center;
+    display: inline-flex;
+    margin-left: 20px;
+    min-height: 50px;
+    text-decoration: none;
+}
