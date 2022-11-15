@@ -9,9 +9,9 @@ function Nav() {
     return (
         <div className="Nav">
             <Link to='/animals'>
-                <div className="Nav-text">
+                <span className="Nav-text">
                     {isHomePage ? 'Currently viewing all animals' : 'Go to all animals'}
-                </div>
+                </span>
             </Link>
         </div>
     );

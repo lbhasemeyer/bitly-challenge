@@ -1,5 +1,6 @@
+import React from 'react';
 import OneAnimal from '../../components/OneAnimal';
-import React, {useState, useEffect} from 'react';
+import './index.css';
 
 interface animalProps {
   id: number,
@@ -8,7 +9,7 @@ interface animalProps {
 
 function Home(props:any) {
   const animalDataList = (props.animals.length > 0) ?
-    (<ul data-testid="animalsList">
+    (<ul className="animalsList" data-testid="animalsList">
       {props.animals.map((animal: animalProps) => {
         return <OneAnimal data-testid="oneAnimal" key={animal.id} name={animal.name} id={animal.id} />
       })}
@@ -21,7 +22,7 @@ function Home(props:any) {
   ): null;
 
   return (
-    <div>
+    <div className="Home">
       <h1>All animals</h1>
       {animalsErrorDisplay}
       {animalDataList}

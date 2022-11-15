@@ -1,18 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './index.css';
 
 interface oneAnimalProps {
     name: string,
-    id: number,
-    active_time: string
+    id: number
 }
 
-const OneAnimal = ({ name, id, active_time }: oneAnimalProps) => {
+const OneAnimal = ({ name, id }: oneAnimalProps) => {
     const animalUrl = `/animals/${id}`;
+
     return (
-        <li>
+        <li className="OneAnimal">
             <Link to={animalUrl} state={{ name, id }}>
-                <span>
+                <span data-testid="oneAnimalName">
                     {name}
                 </span>
             </Link>
