@@ -1,6 +1,7 @@
 .AnimalDetails {
+    height: calc(100vh - 70px);
     text-align: center;
-    height: calc(100vh - 50px);
+    padding-top: 20px;
 }
 
 .AnimalDetails.night {

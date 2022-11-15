@@ -30,7 +30,6 @@ function App(){
         {/* If we had a large dataset I would only want to pass props needed - not allAnimals */}
         <Route path='/animals' element={<Home animals={allAnimals} animalsError={getAnimalsError} />} />
         <Route path='/animals/:id' element={<AnimalDetails animals={allAnimals} />} />
-        {/* Redirects */}
         <Route path="/" element={ <Navigate to="/animals" /> } />
       </Routes>
     </React.Fragment>

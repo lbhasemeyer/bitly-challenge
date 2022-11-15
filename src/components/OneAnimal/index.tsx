@@ -3,16 +3,18 @@ import { Link } from 'react-router-dom';
 
 interface oneAnimalProps {
     name: string,
-    id: number
+    id: number,
+    active_time: string
 }
 
-const OneAnimal = ({ name, id }: oneAnimalProps) => {
+const OneAnimal = ({ name, id, active_time }: oneAnimalProps) => {
     const animalUrl = `/animals/${id}`;
-    
     return (
         <li>
             <Link to={animalUrl} state={{ name, id }}>
-                {name}
+                <span>
+                    {name}
+                </span>
             </Link>
         </li>
     );
