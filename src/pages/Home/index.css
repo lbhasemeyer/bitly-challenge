@@ -1,4 +1,11 @@
 .Home h1 {
-    color: rgb(16, 98, 98);
+    color: rgb(73, 68, 68);
     margin-left: 20px;
+    text-align: center;
+}
+
+.animalsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }

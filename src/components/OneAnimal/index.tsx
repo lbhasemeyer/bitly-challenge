@@ -3,21 +3,22 @@ import { Link } from 'react-router-dom';
 import './index.css';
 
 interface oneAnimalProps {
-    name: string,
-    id: number
+    active_time: string,
+    id: number,
+    name: string
 }
 
-const OneAnimal = ({ name, id }: oneAnimalProps) => {
+const OneAnimal = ({ active_time, id, name }: oneAnimalProps) => {
     const animalUrl = `/animals/${id}`;
+    const activeTime = active_time === 'Nocturnal' ? 'night' : 'day';
+    const mainClassName = `OneAnimal ${activeTime}`;
 
     return (
-        <li className="OneAnimal">
+        <div className={mainClassName} data-testid="oneAnimalName">
             <Link to={animalUrl} state={{ name, id }}>
-                <span data-testid="oneAnimalName">
-                    {name}
-                </span>
+                {name}
             </Link>
-        </li>
+        </div>
     );
 }
 

@@ -9,7 +9,7 @@ function App(){
   const [getAnimalsError, setGetAnimalsError] = useState('');
 
   useEffect(() => {
-    const animalsUrl = 'https://zoo-animal-api.herokuapp.com/animals/rand/10';
+    const animalsUrl = 'https://zoo-animal-api.herokuapp.com/animals/rand/9';
     fetch(animalsUrl, {
       mode: 'cors',
       headers: {
