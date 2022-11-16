@@ -14,11 +14,11 @@ const OneAnimal = ({ active_time, id, name }: oneAnimalProps) => {
     const mainClassName = `OneAnimal ${activeTime}`;
 
     return (
-        <div className={mainClassName} data-testid="oneAnimalName">
-            <Link to={animalUrl} state={{ name, id }}>
+        <Link className={mainClassName} to={animalUrl} state={{ name, id }}>
+            <div className={'OneAnimal-name'} data-testid="oneAnimalName">
                 {name}
-            </Link>
-        </div>
+            </div>
+        </Link>
     );
 }
 
